@@ -40,3 +40,21 @@ Design patterns was used to shape the solution in this repository:
 
 # N-layers code architecture implementation.
  > By using four layer separately we ensure the logical separation and decoupling the code structure in main (index.js) services (logical processing), controllers (access to http layer) and repositories (That enables de data access).
+
+
+# Infrastructure Architecture Diagram.
+> Using a combination of API Gateway ECS Fargate and VPC is enough to deploy our solution with right load distribution using Fargate based ELB to distribute charge between Tasks.
+
+
+
+
+![Diagrama de Infraestructura drawio](https://github.com/dsotoduque/tekton_backend/assets/17690605/b80b4a0f-d90e-46d6-96ab-986ff042b461)
+
+# Software Architecture Diagram.
+> Using microservice architecture with isolated in-memory db with RESTful API to service communication isolated into Docker container.
+
+
+
+![Software Architecture Diagram drawio](https://github.com/dsotoduque/tekton_backend/assets/17690605/11ea27ee-46bc-48c8-a608-cd1e38b28f58)
+
+
