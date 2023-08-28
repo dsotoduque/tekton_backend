@@ -6,6 +6,7 @@ const swaggerUi = require('swagger-ui-express');
 const bodyParser = require('body-parser');
 const { check, validationResult } = require('express-validator');
 const app = express();
+const Logger = require('./logs/logger')
 
 const container = createContainer();
 container.register({
@@ -15,7 +16,7 @@ container.register({
 });
 
 app.use(scopePerRequest(container));
-
+app.use(Logger.logResponseTime);
 app.use(bodyParser.json());
 
 // Define Swagger options
