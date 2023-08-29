@@ -6,6 +6,16 @@
 
  >After that, you need to run the docker container by running command on docker:
  >`docker run -p 3000:3000 tekton-backend`
+
+### run without docker context: To verify logging.
+
+> Make sure that you have LTS Node.js version installed.
+
+> Run command to install dependencies into de root directory
+ >`npm install`
+
+
+> Run command to run  the server on node `node index.js --watch`
  
 #  Cloud resources explanation:
 ## ECS Fargate
