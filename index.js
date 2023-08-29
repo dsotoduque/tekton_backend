@@ -51,6 +51,7 @@ const productController = new ProductController({
 });
 
 app.use('/products', productController.router);
+app.get('/health', productController.healthCheck);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
