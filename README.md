@@ -47,8 +47,8 @@ Design patterns was used to shape the solution in this repository:
 
 
 
+![Diagrama de Infraestructura drawio (1)](https://github.com/dsotoduque/tekton_backend/assets/17690605/ee10bf5c-94e4-4cf8-a989-69ee5cddf08b)
 
-![Diagrama de Infraestructura drawio](https://github.com/dsotoduque/tekton_backend/assets/17690605/b80b4a0f-d90e-46d6-96ab-986ff042b461)
 
 # Software Architecture Diagram.
 > Using microservice architecture with isolated in-memory db with RESTful API to service communication isolated into Docker container.
@@ -56,5 +56,24 @@ Design patterns was used to shape the solution in this repository:
 
 
 ![Software Architecture Diagram drawio](https://github.com/dsotoduque/tekton_backend/assets/17690605/11ea27ee-46bc-48c8-a608-cd1e38b28f58)
+
+
+
+# Monitoring Strategy.
+> There is 3 architecture monitoring level:
+>
+> 1. Application level monitoring logging: Inside docker container in directory tmp/log there is files that log the execution time for each request.
+> 2. Service level monitoring: Dashboards in CW which is monitoring the cluster service behavior.
+
+
+> ![monitoring 2](https://github.com/dsotoduque/tekton_backend/assets/17690605/adf1dd95-cea1-470d-9994-30159254e9f1)
+
+
+>    
+> 3.  ELB ALB level monitoring: Whoch log the request/response strategy for evaluate response structure
+
+
+>    ![monitoring](https://github.com/dsotoduque/tekton_backend/assets/17690605/04b38682-78b3-407c-9da8-1bc064e1c1e2)
+
 
 
