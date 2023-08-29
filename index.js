@@ -45,13 +45,18 @@ const validateInput = (req, res, next) => {
 };
 
 const ProductController = require('./controllers/productController');
+const HealthCheckController = require('./controllers/healthCheckController');
 
 const productController = new ProductController({
   productService: container.resolve('productService'),
 });
 
+const healthCheckController = new HealthCheckController({});
+
+
+
 app.use('/products', productController.router);
-app.get('/health', productController.healthCheck);
+app.use('/healthcheck', healthCheckController.router);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');

@@ -170,6 +170,7 @@ class ProductController {
      *         description: An error occurred while deleting the product
      */
     this.router.delete('/:id', [param('id').isAlphanumeric()], this.deleteProduct.bind(this));
+    
   }
 
   async createProduct(req, res) {
